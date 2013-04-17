@@ -1,0 +1,12 @@
+fabric
+django
+django-piston
+pillow
+psycopg2
+pytz
+requests
+scons
+south
+tox
+versiontools
+wsgiref

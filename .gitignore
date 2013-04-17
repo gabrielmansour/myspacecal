@@ -1,0 +1,11 @@
+# Compiled Python files
+*.py[co]
+__pycache__
+# SCons
+.sconsign
+# Emacs
+*~
+# Collected static files
+public_html/
+# Development database
+development.db
