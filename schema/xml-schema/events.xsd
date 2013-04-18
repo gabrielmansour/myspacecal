@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-16"?>
+<xsd:schema attributeFormDefault="unqualified" elementFormDefault="qualified" version="1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="events">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element maxOccurs="unbounded" name="event">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="observationId" type="xsd:int" />
+              <xsd:element name="startTime" type="xsd:dateTime" />
+              <xsd:element name="endTime" type="xsd:dateTime" />
+              <xsd:element name="target" type="xsd:string" />
+              <xsd:element name="revolution" type="xsd:int" />
+              <xsd:element name="ra" type="xsd:decimal" />
+              <xsd:element name="dec" type="xsd:decimal" />
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>
