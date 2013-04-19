@@ -79,23 +79,20 @@ class Target(models.Model):
     # Fields
     name = models.CharField(
         max_length = 100,
-        unique = True,
+        primary_key = True,
         help_text = _("The target name")
     )
-
-    # These fields are defined as xsd:decimal in the published schema
-    # of the existing app. Conforming implementations need to have
-    # minimum of 18 significant digits, but no maximum is specified.
-
-    ra = models.DecimalField(
-        max_digits = 32,
-        decimal_places = 8,
+    # TODO: create a custom EquatorialCoordField to store this
+    # coordinate data.
+    # - https://en.wikipedia.org/wiki/Equatorial_coordinate_system
+    # - https://en.wikipedia.org/wiki/Sidereal_time
+    ra = models.CharField(
+        max_length = 24,
         verbose_name = "RA",
         help_text = _("Equatorial coordinates: right ascension")
     )
-    dec = models.DecimalField(
-        max_digits = 32,
-        decimal_places = 8,
+    dec = models.CharField(
+        max_length = 24,
         verbose_name = "Dec",
         help_text = _("Equatorial coordinates: declination")
     )
