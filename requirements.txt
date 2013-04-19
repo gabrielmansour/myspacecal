@@ -2,10 +2,12 @@ fabric
 docutils
 django
 django-piston
+lxml
 pillow
 psycopg2
 pytz
 requests
+requests-cache
 scons
 south
 tox
