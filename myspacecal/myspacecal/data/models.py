@@ -91,13 +91,13 @@ class Target(models.Model):
         max_digits = 32,
         decimal_places = 8,
         verbose_name = "RA",
-        help_text = _("Right ascension")
+        help_text = _("Equatorial coordinates: right ascension")
     )
     dec = models.DecimalField(
         max_digits = 32,
         decimal_places = 8,
-        verbose_name = "DEC",
-        help_text = _("Declination")
+        verbose_name = "Dec",
+        help_text = _("Equatorial coordinates: declination")
     )
 
     def __unicode__(self):
