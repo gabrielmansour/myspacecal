@@ -9,3 +9,5 @@ __pycache__
 public_html/
 # Development database
 development.db
+# Requests cache
+*.cache.sqlite
