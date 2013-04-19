@@ -4,10 +4,16 @@
 from django.conf import settings
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
+from django.contrib import admin
+from django.contrib.sites.models import Site
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 admin.autodiscover()
 
+# Don't need to edit the 'sites' so remove admin interface.
+admin.site.unregister(Site)
+
+# public
 urlpatterns = patterns('',
     url(r'^', include('myspacecal.public.urls', namespace='public', app_name='public')),
 )

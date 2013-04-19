@@ -1,6 +1,14 @@
 [
    {
       "pk" : 1,
+      "model" : "sites.site",
+      "fields" : {
+         "domain" : "myspacecal.com",
+         "name" : "myspacecal.com"
+      }
+   },
+   {
+      "pk" : 1,
       "model" : "data.agency",
       "fields" : {
          "acronym" : "ESA",
