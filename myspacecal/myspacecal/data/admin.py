@@ -28,7 +28,11 @@ class SatelliteAdmin(admin.ModelAdmin):
 admin.site.register(Satellite, SatelliteAdmin)
 
 class TargetAdmin(admin.ModelAdmin):
-    pass
+    list_display = (
+        'name',
+        'ra',
+        'dec',
+    )
 admin.site.register(Target, TargetAdmin)
 
 class ObservationAdmin(admin.ModelAdmin):
