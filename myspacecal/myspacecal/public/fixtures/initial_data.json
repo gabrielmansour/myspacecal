@@ -1,0 +1,195 @@
+[
+   {
+      "pk" : 1,
+      "model" : "data.agency",
+      "fields" : {
+         "acronym" : "ESA",
+         "name" : "European Space Agency",
+         "url" : "http://esa.int/"
+      }
+   },
+   {
+      "pk" : 2,
+      "model" : "data.agency",
+      "fields" : {
+         "acronym" : "NASA",
+         "name" : "National Aeronautics and Space Administration",
+         "url" : "http://nasa.gov/"
+      }
+   },
+   {
+      "pk" : 3,
+      "model" : "data.agency",
+      "fields" : {
+         "acronym" : "JAXA",
+         "name" : "Japan Aerospace Exploration Agency",
+         "url" : "http://jaxa.jp/"
+      }
+   },
+   {
+      "pk" : 4,
+      "model" : "data.agency",
+      "fields" : {
+         "acronym" : "ASI",
+         "name" : "Agenzia Spaziale Italiana",
+         "url" : "http://asi.it/"
+      }
+   },
+   {
+      "pk" : 1,
+      "model" : "data.satellite",
+      "fields" : {
+         "name" : "XMM-Newton",
+         "url" : "http://sci.esa.int/xmm-newton",
+         "agency" : [
+            1
+         ],
+         "wavelength" : 1,
+         "operational" : true
+      }
+   },
+   {
+      "pk" : 2,
+      "model" : "data.satellite",
+      "fields" : {
+         "name" : "Hubble Space Telescope",
+         "url" : "http://nasa.gov/hubble",
+         "agency" : [
+            1,
+            2
+         ],
+         "wavelength" : 4,
+         "operational" : true
+      }
+   },
+   {
+      "pk" : 3,
+      "model" : "data.satellite",
+      "fields" : {
+         "name" : "SWIFT",
+         "url" : "http://nasa.gov/swift",
+         "agency" : [
+            2
+         ],
+         "wavelength" : 4,
+         "operational" : true
+      }
+   },
+   {
+      "pk" : 4,
+      "model" : "data.satellite",
+      "fields" : {
+         "name" : "NuSTAR",
+         "url" : "http://nasa.gov/nustar",
+         "agency" : [
+            2
+         ],
+         "wavelength" : 1,
+         "operational" : true
+      }
+   },
+   {
+      "pk" : 5,
+      "model" : "data.satellite",
+      "fields" : {
+         "name" : "INTEGRAL",
+         "url" : "http://sci.esa.int/integral",
+         "agency" : [
+            1
+         ],
+         "wavelength" : 2,
+         "operational" : true
+      }
+   },
+   {
+      "pk" : 6,
+      "model" : "data.satellite",
+      "fields" : {
+         "name" : "Chandra",
+         "url" : "http://nasa.gov/chandra",
+         "agency" : [
+            2
+         ],
+         "wavelength" : 1,
+         "operational" : true
+      }
+   },
+   {
+      "pk" : 7,
+      "model" : "data.satellite",
+      "fields" : {
+         "name" : "Suzaku",
+         "url" : "http://www.jaxa.jp/projects/sat/astro_e2/",
+         "agency" : [
+            3
+         ],
+         "wavelength" : 1,
+         "operational" : true
+      }
+   },
+   {
+      "pk" : 8,
+      "model" : "data.satellite",
+      "fields" : {
+         "name" : "AGILE",
+         "url" : "http://agile.asdc.asi.it/",
+         "agency" : [
+            4
+         ],
+         "wavelength" : 2,
+         "operational" : true
+      }
+   },
+   {
+      "pk" : 9,
+      "model" : "data.satellite",
+      "fields" : {
+         "name" : "RXTE",
+         "url" : "http://www.nasa.gov/centers/goddard/missions/rxte.html",
+         "agency" : [
+            2
+         ],
+         "wavelength" : 1,
+         "operational" : false
+      }
+   },
+   {
+      "pk" : 10,
+      "model" : "data.satellite",
+      "fields" : {
+         "name" : "Herschel",
+         "url" : "http://sci.esa.int/herschel",
+         "agency" : [
+            1
+         ],
+         "wavelength" : 3,
+         "operational" : true
+      }
+   },
+   {
+      "pk" : 11,
+      "model" : "data.satellite",
+      "fields" : {
+         "name" : "Spitzer",
+         "url" : "http://nasa.gov/spitzer",
+         "agency" : [
+            2
+         ],
+         "wavelength" : 3,
+         "operational" : true
+      }
+   },
+   {
+      "pk" : 12,
+      "model" : "data.satellite",
+      "fields" : {
+         "name" : "Fermi",
+         "url" : "http://nasa.gov/fermi",
+         "agency" : [
+            2
+         ],
+         "wavelength" : 2,
+         "operational" : true
+      }
+   }
+]
