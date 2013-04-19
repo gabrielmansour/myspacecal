@@ -1,4 +1,5 @@
 fabric
+docutils
 django
 django-piston
 pillow
