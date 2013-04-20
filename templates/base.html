@@ -48,6 +48,12 @@
               <img src="{{ STATIC_URL }}svg/logo.svg" alt="Logo" style="width:24px; height:24px;" />
               <span class="hidden-phone">My Space Cal</span>
             </a>
+            <ul class="nav">
+              {% comment %}TODO: add class="active" to current menu item.{% endcomment %}
+              <li><a href="{% url 'public:home' %}">Home</a></li>
+              <li><a href="{% url 'public:about' %}">About</a></li>
+              <li><a href="{% url 'public:contact' %}">Contact</a></li>
+            </ul>
             <!-- logo end -->
             <ul class="nav pull-right">
               <!-- color change -->
