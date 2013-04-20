@@ -43,7 +43,7 @@
         <div class="navbar-inner">
           <div class="container-fluid">
             <!-- logo start -->
-            <a class="brand" href="index.html">
+            <a class="brand" href="{% url 'public:home' %}">
               {% comment %}TODO: put size in CSS{% endcomment %}
               <img src="{{ STATIC_URL }}svg/logo.svg" alt="Logo" style="width:24px; height:24px;" />
               <span class="hidden-phone">My Space Cal</span>
