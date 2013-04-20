@@ -117,23 +117,29 @@ class InstrumentPackage(models.Model):
     description = models.TextField(
         help_text = _("A Markdown-formatted description")
     )
-    # WAVELENGTH_UNSPECIFIED = 0
-    # WAVELENGTH_XRAY = 1
-    # WAVELENGTH_GAMMA_RAY = 2
-    # WAVELENGTH_INFRARED = 3
-    # WAVELENGTH_MULTI = 4
-    # WAVELENGTH = (
-    #     (WAVELENGTH_UNSPECIFIED, _("Unspecified")),
-    #     (WAVELENGTH_XRAY, _("X-Ray")),
-    #     (WAVELENGTH_GAMMA_RAY, _("Gamma Ray")),
-    #     (WAVELENGTH_INFRARED, _("Infrared")),
-    #     (WAVELENGTH_MULTI, _("Multi-wavelength")),
-    # )
-    # wavelength = models.PositiveSmallIntegerField(
-    #     choices = WAVELENGTH,
-    #     default = WAVELENGTH_UNSPECIFIED,
-    #     help_text = _("Wavelength that satellite observes")
-    # )
+    WAVELENGTH_UNSPECIFIED = 0
+    WAVELENGTH_XRAY = 1
+    WAVELENGTH_GAMMA_RAY = 2
+    WAVELENGTH_INFRARED = 3
+    WAVELENGTH = (
+        (WAVELENGTH_UNSPECIFIED, _("Unspecified")),
+        (WAVELENGTH_XRAY, _("X-Ray")),
+        (WAVELENGTH_GAMMA_RAY, _("Gamma Ray")),
+        (WAVELENGTH_INFRARED, _("Infrared")),
+    )
+    wavelength_name = models.PositiveSmallIntegerField(
+        choices = WAVELENGTH,
+        default = WAVELENGTH_UNSPECIFIED,
+        help_text = _("Description of wavelength being observed")
+    )
+    wavelength_min = models.PositiveIntegerField(
+        blank = True,
+        help_text = _("Minimum wavelength detectable")
+    )
+    wavelength_max = models.PositiveIntegerField(
+        blank = True,
+        help_text = _("Maximum wavelength detectable")
+    )
 
     # TODO: add whatever other fields we care about.
 
