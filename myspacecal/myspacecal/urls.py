@@ -14,8 +14,10 @@ admin.autodiscover()
 admin.site.unregister(Site)
 
 # public
-urlpatterns = patterns('',
-    url(r'^', include('myspacecal.public.urls', namespace='public', app_name='public')),
+urlpatterns = patterns(
+    '',
+    url(r'^api/', include('myspacecal.api.urls', namespace='api', app_name='api')),
+    url(r'', include('myspacecal.public.urls', namespace='public', app_name='public')),
 )
 
 # admin

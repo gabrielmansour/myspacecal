@@ -91,6 +91,7 @@ INSTALLED_APPS = (
     # External
 
     # Internal
+    'myspacecal.api',
     'myspacecal.data',
     'myspacecal.public',
 )

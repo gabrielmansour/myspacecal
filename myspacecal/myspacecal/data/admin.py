@@ -10,7 +10,11 @@ from models import Observation
 
 
 class AgencyAdmin(admin.ModelAdmin):
-    list_display = ('acronym','name',)
+    list_display = (
+        'acronym',
+        'name',
+    )
+    prepopulated_fields = {'slug': ('acronym',),}
 admin.site.register(Agency, AgencyAdmin)
 
 class SatelliteAdmin(admin.ModelAdmin):
@@ -18,8 +22,9 @@ class SatelliteAdmin(admin.ModelAdmin):
         'name',
         'wavelength',
         'agencies',
-        'operational',
+        'active',
     )
+    prepopulated_fields = {'slug': ('name',),}
     def agencies(self, obj):
        agency_list = [str(a) for a in obj.agency.all()]
        return ", ".join(agency_list)
