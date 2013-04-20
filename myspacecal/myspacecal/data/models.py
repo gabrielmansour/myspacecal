@@ -227,6 +227,12 @@ class Observation(models.Model):
     def get_absolute_url(self, request):
         return reverse('data:observation-detail', args=[str(self.id)])
 
+    def link(self):
+        return {
+            'rel': 'self',
+            'url': reverse('api:observation-detail', args=[self.id]),
+        }
+
     def __unicode__(self):
         return unicode(self.id)
 

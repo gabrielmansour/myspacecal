@@ -82,8 +82,15 @@ class TargetHandler(BaseHandler):
         return target
 
 class ObservationHandler(BaseHandler):
-    allowed_methods = ('GET',)
     model = Observation
+    allowed_methods = ('GET',)
+    fields = ('id',
+              'satellite',
+              'link',
+              'target',
+              'revolution',
+              'start_time',
+              'finish_time',)
 
     def read(self, request, id=None):
         if id:
