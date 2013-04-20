@@ -1,0 +1,199 @@
+[
+   {
+      "pk" : 1,
+      "model" : "data.agency",
+      "fields" : {
+         "acronym" : "ESA",
+         "slug" : "esa",
+         "name" : "European Space Agency",
+         "url" : "http://esa.int/"
+      }
+   },
+   {
+      "pk" : 2,
+      "model" : "data.agency",
+      "fields" : {
+         "acronym" : "NASA",
+         "slug" : "nasa",
+         "name" : "National Aeronautics and Space Administration",
+         "url" : "http://nasa.gov/"
+      }
+   },
+   {
+      "pk" : 3,
+      "model" : "data.agency",
+      "fields" : {
+         "acronym" : "JAXA",
+         "slug" : "jaxa",
+         "name" : "Japan Aerospace Exploration Agency",
+         "url" : "http://jaxa.jp/"
+      }
+   },
+   {
+      "pk" : 4,
+      "model" : "data.agency",
+      "fields" : {
+         "acronym" : "ASI",
+         "slug" : "asi",
+         "name" : "Agenzia Spaziale Italiana",
+         "url" : "http://asi.it/"
+      }
+   },
+   {
+      "pk" : 1,
+      "model" : "data.satellite",
+      "fields" : {
+         "name" : "XMM-Newton",
+         "slug" : "xmm-newton",
+         "url" : "http://sci.esa.int/xmm-newton",
+         "agency" : [
+            1
+         ],
+         "active" : true
+      }
+   },
+   {
+      "pk" : 2,
+      "model" : "data.satellite",
+      "fields" : {
+         "name" : "HST",
+         "slug" : "hubble-space-telescope",
+         "url" : "http://nasa.gov/hubble",
+         "agency" : [
+            1,
+            2
+         ],
+         "active" : true
+      }
+   },
+   {
+      "pk" : 3,
+      "model" : "data.satellite",
+      "fields" : {
+         "name" : "SWIFT",
+         "slug" : "swift",
+         "url" : "http://nasa.gov/swift",
+         "agency" : [
+            2
+         ],
+         "active" : true
+      }
+   },
+   {
+      "pk" : 4,
+      "model" : "data.satellite",
+      "fields" : {
+         "name" : "NuSTAR",
+         "slug" : "nustar",
+         "url" : "http://nasa.gov/nustar",
+         "agency" : [
+            2
+         ],
+         "active" : true
+      }
+   },
+   {
+      "pk" : 5,
+      "model" : "data.satellite",
+      "fields" : {
+         "name" : "INTEGRAL",
+         "slug" : "integral",
+         "url" : "http://sci.esa.int/integral",
+         "agency" : [
+            1
+         ],
+         "active" : true
+      }
+   },
+   {
+      "pk" : 6,
+      "model" : "data.satellite",
+      "fields" : {
+         "name" : "Chandra",
+         "slug" : "chandra",
+         "url" : "http://nasa.gov/chandra",
+         "agency" : [
+            2
+         ],
+         "active" : true
+      }
+   },
+   {
+      "pk" : 7,
+      "model" : "data.satellite",
+      "fields" : {
+         "name" : "Suzaku",
+         "slug" : "suzaku",
+         "url" : "http://www.jaxa.jp/projects/sat/astro_e2/",
+         "agency" : [
+            3
+         ],
+         "active" : true
+      }
+   },
+   {
+      "pk" : 8,
+      "model" : "data.satellite",
+      "fields" : {
+         "name" : "AGILE",
+         "slug" : "agile",
+         "url" : "http://agile.asdc.asi.it/",
+         "agency" : [
+            4
+         ],
+         "active" : true
+      }
+   },
+   {
+      "pk" : 9,
+      "model" : "data.satellite",
+      "fields" : {
+         "name" : "RXTE",
+         "slug" : "rxte",
+         "url" : "http://www.nasa.gov/centers/goddard/missions/rxte.html",
+         "agency" : [
+            2
+         ],
+         "active" : false
+      }
+   },
+   {
+      "pk" : 10,
+      "model" : "data.satellite",
+      "fields" : {
+         "name" : "Herschel",
+         "slug" : "herschel",
+         "url" : "http://sci.esa.int/herschel",
+         "agency" : [
+            1
+         ],
+         "active" : true
+      }
+   },
+   {
+      "pk" : 11,
+      "model" : "data.satellite",
+      "fields" : {
+         "name" : "Spitzer",
+         "slug" : "spitzer",
+         "url" : "http://nasa.gov/spitzer",
+         "agency" : [
+            2
+         ],
+         "active" : true
+      }
+   },
+   {
+      "pk" : 12,
+      "model" : "data.satellite",
+      "fields" : {
+         "name" : "Fermi",
+         "slug" : "fermi",
+         "url" : "http://nasa.gov/fermi",
+         "agency" : [
+            2
+         ],
+         "active" : true
+      }
+   }
+]

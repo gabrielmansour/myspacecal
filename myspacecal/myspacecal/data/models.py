@@ -71,23 +71,6 @@ class Satellite(models.Model):
         related_name = 'satellites',
         help_text = _("Agencies responsbile for the satellite")
     )
-    WAVELENGTH_UNSPECIFIED = 0
-    WAVELENGTH_XRAY = 1
-    WAVELENGTH_GAMMA_RAY = 2
-    WAVELENGTH_INFRARED = 3
-    WAVELENGTH_MULTI = 4
-    WAVELENGTH = (
-        (WAVELENGTH_UNSPECIFIED, _("Unspecified")),
-        (WAVELENGTH_XRAY, _("X-Ray")),
-        (WAVELENGTH_GAMMA_RAY, _("Gamma Ray")),
-        (WAVELENGTH_INFRARED, _("Infrared")),
-        (WAVELENGTH_MULTI, _("Multi-wavelength")),
-    )
-    wavelength = models.PositiveSmallIntegerField(
-        choices = WAVELENGTH,
-        default = WAVELENGTH_UNSPECIFIED,
-        help_text = _("Wavelength that satellite observes")
-    )
     url = models.URLField(
         help_text = _("Satellite home page")
     )
@@ -104,6 +87,50 @@ class Satellite(models.Model):
             'rel': 'self',
             'url': reverse('api:satellite-detail', args=[self.slug]),
         }
+
+    def __unicode__(self):
+        return unicode(self.name)
+
+    class Meta:
+        pass
+
+class InstrumentPackage(models.Model):
+    """
+    """
+    satellite = models.ForeignKey(
+        Satellite,
+        related_name = "instruments"
+    )
+    name = models.CharField(
+        max_length = 120,
+        help_text = _("Human-readable name")
+    )
+    acronym = models.CharField(
+        max_length = 20,
+        help_text = _("Acronym")
+    )
+    description = models.TextField(
+        help_text = _("A Markdown-formatted description")
+    )
+    # WAVELENGTH_UNSPECIFIED = 0
+    # WAVELENGTH_XRAY = 1
+    # WAVELENGTH_GAMMA_RAY = 2
+    # WAVELENGTH_INFRARED = 3
+    # WAVELENGTH_MULTI = 4
+    # WAVELENGTH = (
+    #     (WAVELENGTH_UNSPECIFIED, _("Unspecified")),
+    #     (WAVELENGTH_XRAY, _("X-Ray")),
+    #     (WAVELENGTH_GAMMA_RAY, _("Gamma Ray")),
+    #     (WAVELENGTH_INFRARED, _("Infrared")),
+    #     (WAVELENGTH_MULTI, _("Multi-wavelength")),
+    # )
+    # wavelength = models.PositiveSmallIntegerField(
+    #     choices = WAVELENGTH,
+    #     default = WAVELENGTH_UNSPECIFIED,
+    #     help_text = _("Wavelength that satellite observes")
+    # )
+
+    # TODO: add whatever other fields we care about.
 
     def __unicode__(self):
         return unicode(self.name)

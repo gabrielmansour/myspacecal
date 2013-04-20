@@ -4,9 +4,10 @@
 from django.contrib import admin
 from django.utils.translation import ugettext_lazy as _
 from models import Agency
+from models import InstrumentPackage
+from models import Observation
 from models import Satellite
 from models import Target
-from models import Observation
 
 
 class AgencyAdmin(admin.ModelAdmin):
@@ -17,10 +18,16 @@ class AgencyAdmin(admin.ModelAdmin):
     prepopulated_fields = {'slug': ('acronym',),}
 admin.site.register(Agency, AgencyAdmin)
 
+class InstrumentPackageInline(admin.StackedInline):
+    model = InstrumentPackage
+    extra = 1
+
 class SatelliteAdmin(admin.ModelAdmin):
+    inlines = (
+        InstrumentPackageInline,
+    )
     list_display = (
         'name',
-        'wavelength',
         'agencies',
         'active',
     )

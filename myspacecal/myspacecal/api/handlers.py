@@ -60,7 +60,7 @@ class AgencyHandler(BaseHandler):
 class SatelliteHandler(BaseHandler):
     allowed_methods = ('GET',)
     fields = ('id','name','link','url','active',)
-    exclude = ('slug','wavelength',)
+    exclude = ('slug',)
     model = Satellite
 
     def read(self, request, slug=None):
