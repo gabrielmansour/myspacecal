@@ -135,7 +135,7 @@
             3
          ],
          "active" : true,
-         "color" : "#ff1123"
+         "color" : "#99cc00"
       }
    },
    {
@@ -149,7 +149,7 @@
             4
          ],
          "active" : true,
-         "color" : "#ff1123"
+         "color" : "#007c6b"
       }
    },
    {
@@ -163,7 +163,7 @@
             2
          ],
          "active" : false,
-         "color" : "#ff1123"
+         "color" : "#890e86"
       }
    },
    {
@@ -177,7 +177,7 @@
             1
          ],
          "active" : true,
-         "color" : "#ff1123"
+         "color" : "#1170af"
       }
    },
    {
@@ -191,7 +191,7 @@
             2
          ],
          "active" : true,
-         "color" : "#ff1123"
+         "color" : "#133ccc"
       }
    },
    {
@@ -205,7 +205,7 @@
             2
          ],
          "active" : true,
-         "color" : "#ff2233"
+         "color" : "#cc9900"
       }
    }
 ]
