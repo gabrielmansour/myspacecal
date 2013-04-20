@@ -266,7 +266,7 @@
           {% for satellite in satellites %}
           <li class="">
             <a href="{% url 'public:satellite-detail' satellite.slug %}">
-              <i class="icon-table"></i>
+              <i class="icon-circle" style="color: {{ satellite.color }};"></i>
               <span class="hidden-phone">{{ satellite.name }}</span>
               <b class="caret-left"></b>
             </a>

@@ -78,6 +78,11 @@ class Satellite(models.Model):
         default = True,
         help_text = _("Is the satellite mission still in-progress?")
     )
+    # TODO: make this a custom 'ColorField'.
+    color = models.CharField(
+        max_length = 7,
+        help_text = _("Hex color: #RRGGBB used to represent a satellite")
+    )
 
     def get_absolute_url(self):
         return reverse('data:satellite-detail', args=[self.slug])
