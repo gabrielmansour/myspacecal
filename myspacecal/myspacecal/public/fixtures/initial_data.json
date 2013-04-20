@@ -65,7 +65,7 @@
       "pk" : 2,
       "model" : "data.satellite",
       "fields" : {
-         "name" : "Hubble Space Telescope",
+         "name" : "HST",
          "slug" : "hubble-space-telescope",
          "url" : "http://nasa.gov/hubble",
          "agency" : [
