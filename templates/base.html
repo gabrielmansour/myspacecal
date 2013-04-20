@@ -224,6 +224,9 @@
       <div class="navigation">
         <ul class="nav nav-stacked">
           <!-- nav item start -->
+          <li class="nav-header hidden-phone">Agencies</li>
+
+          {% comment %}
           <li class="active">
             <a data-target="#demo" data-toggle="collapse" href="index.html" id="demodrop">
               <i class="icon-bar-chart"></i>
@@ -231,6 +234,8 @@
               <b class="caret-left"></b>
             </a>
           </li>
+          {% endcomment %}
+
           {% for agency in agencies %}
           <li class="">
             <a href="{% url 'public:agency-detail' agency.slug %}">
