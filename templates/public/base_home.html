@@ -9,7 +9,7 @@
           <div class="page-header">
             <h1 class="pull-left">
               <i class="icon-bar-chart"></i>
-              <span>Dashboard</span>
+              <span>Home</span>
             </h1>
 
             <div class="daterange pull-right" id="daterange">
@@ -23,6 +23,7 @@
           </div>
         </div>
       </div>
+      {% comment %}
       <div class="alert alert-info">
         <a class="close" data-dismiss="alert" href="#">&times;</a>
         <i class="icon-info-sign"></i>
@@ -30,6 +31,33 @@
         Welcome to Flatty template. I hope you'll like it. You can change theme color in top right corner
         <i class="icon-adjust"></i> if you want.
       </div>
+      {% endcomment %}
+
+
+      <div class="row-fluid">
+        <div class="span12 box">
+          <div class="box-header">
+            <div class="lead">
+              <div class="icon-calendar"></div>
+              Upcoming events
+            </div>
+            <div class="actions">
+              <a class="btn box-refresh" href="#">
+                <i class="icon-refresh"></i>
+              </a>
+              <a class="btn box-remove" href="#">
+                <i class="icon-remove"></i>
+              </a>
+            </div>
+          </div>
+          <div class="thumbnail">
+            <div class="inner-spacer">
+              <div id="calendar"></div>
+            </div>
+          </div>
+        </div>
+      </div><!-- /calendar -->
+
       <div class="row-fluid">
         <div class="span6 box">
           <div class="thumbnail">
@@ -238,6 +266,8 @@
           </div>
         </div>
       </div>
+
+      {% comment %}
       <div class="row-fluid">
         <div class="span6 box">
           <div class="box-header">
@@ -336,29 +366,7 @@
           </div>
         </div>
       </div>
-      <div class="row-fluid">
-        <div class="span12 box">
-          <div class="box-header">
-            <div class="lead">
-              <div class="icon-calendar"></div>
-              Upcoming events
-            </div>
-            <div class="actions">
-              <a class="btn box-refresh" href="#">
-                <i class="icon-refresh"></i>
-              </a>
-              <a class="btn box-remove" href="#">
-                <i class="icon-remove"></i>
-              </a>
-            </div>
-          </div>
-          <div class="thumbnail">
-            <div class="inner-spacer">
-              <div id="calendar"></div>
-            </div>
-          </div>
-        </div>
-      </div>
+      {% endcomment %}
     </div>
   </div>
 </div>
