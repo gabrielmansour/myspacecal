@@ -27,10 +27,15 @@ def about(request):
     ctx = dict(COMMON_CONTEXT, **ctx)
     return TemplateResponse(request, 'public/base_about.html', ctx)
 
-def contact (request):
+def contact(request):
     ctx = {}
     ctx = dict(COMMON_CONTEXT, **ctx)
     return TemplateResponse(request, 'public/base_contact.html', ctx)
+
+def help(request):
+    ctx = {}
+    ctx = dict(COMMON_CONTEXT, **ctx)
+    return TemplateResponse(request, 'public/base_help.html', ctx)
 
 def agency(request, slug):
     agency = get_object_or_404(Agency, slug=slug)
