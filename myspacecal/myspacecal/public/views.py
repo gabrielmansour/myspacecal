@@ -8,20 +8,28 @@ from django.utils.timezone import utc
 from myspacecal.data.models import Agency
 from myspacecal.data.models import Satellite
 
+agencies = Agency.objects.all()
+satellites = Satellite.objects.all()
+
+COMMON_CONTEXT = {
+    'agencies': agencies,
+    'satellites': satellites,
+}
 
 def home(request):
     ctx = {
-        'agencies': Agency.objects.all(),
-        'satellites': Satellite.objects.all(),
     }
+    ctx = dict(COMMON_CONTEXT, **ctx)
     return TemplateResponse(request, 'public/base_home.html', ctx)
 
 def about(request):
     ctx = {}
+    ctx = dict(COMMON_CONTEXT, **ctx)
     return TemplateResponse(request, 'public/base_about.html', ctx)
 
 def contact (request):
     ctx = {}
+    ctx = dict(COMMON_CONTEXT, **ctx)
     return TemplateResponse(request, 'public/base_contact.html', ctx)
 
 def agency(request, slug):
@@ -29,6 +37,7 @@ def agency(request, slug):
     ctx = {
         'agency': agency,
     }
+    ctx = dict(COMMON_CONTEXT, **ctx)
     return TemplateResponse(request, 'public/base_agency.html', ctx)
 
 def satellite(request, slug):
@@ -36,4 +45,5 @@ def satellite(request, slug):
     ctx = {
         'satellite': satellite,
     }
+    ctx = dict(COMMON_CONTEXT, **ctx)
     return TemplateResponse(request, 'public/base_satellite.html', ctx)
