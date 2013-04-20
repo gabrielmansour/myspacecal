@@ -1,30 +1,373 @@
 {% extends "public/base.html" %}
 
 {% block content %}
-<!-- Main hero unit for a primary marketing message or call to action -->
-<div class="hero-unit">
-  <h1>Hello, world!</h1>
-  <p>This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-  <p><a class="btn btn-primary btn-large">Learn more &raquo;</a></p>
-</div>
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span12">
+      <div class="row-fluid">
+        <div class="span12">
+          <div class="page-header">
+            <h1 class="pull-left">
+              <i class="icon-bar-chart"></i>
+              <span>Home</span>
+            </h1>
 
-<div class="row">
-  <div class="span4">
-    <h2>Heading</h2>
-    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-    <p><a class="btn" href="#">View details &raquo;</a></p>
-  </div>
-  <div class="span4">
-    <h2>Heading</h2>
-    <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-    <p><a class="btn" href="#">View details &raquo;</a></p>
-  </div>
-  <div class="span4">
-    <h2>Heading</h2>
-    <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-    <p><a class="btn" href="#">View details &raquo;</a></p>
+            <div class="daterange pull-right" id="daterange">
+              <div class="thumbnail">
+                <i class="icon-calendar"></i>
+                <span>2013-03-29 - 2013-04-05</span>
+                <b class="caret"></b>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+      </div>
+      {% comment %}
+      <div class="alert alert-info">
+        <a class="close" data-dismiss="alert" href="#">&times;</a>
+        <i class="icon-info-sign"></i>
+        <strong>Howdy!</strong>
+        Welcome to Flatty template. I hope you'll like it. You can change theme color in top right corner
+        <i class="icon-adjust"></i> if you want.
+      </div>
+      {% endcomment %}
+
+
+      <div class="row-fluid">
+        <div class="span12 box">
+          <div class="box-header">
+            <div class="lead">
+              <div class="icon-calendar"></div>
+              Upcoming events
+            </div>
+            <div class="actions">
+              <a class="btn box-refresh" href="#">
+                <i class="icon-refresh"></i>
+              </a>
+              <a class="btn box-remove" href="#">
+                <i class="icon-remove"></i>
+              </a>
+            </div>
+          </div>
+          <div class="thumbnail">
+            <div class="inner-spacer">
+              <div id="calendar"></div>
+            </div>
+          </div>
+        </div>
+      </div><!-- /calendar -->
+
+      <div class="row-fluid">
+        <div class="span6 box">
+          <div class="thumbnail">
+            <div class="inner-spacer">
+              <div id="stats-chart2"></div>
+            </div>
+          </div>
+        </div>
+        <div class="span6 box">
+          <div class="thumbnail">
+            <div class="inner-spacer">
+              <div id="stats-chart1"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row-fluid">
+        <div class="span6 box">
+          <div class="box-header">
+            <div class="lead">
+              <div class="icon-inbox"></div>
+              Orders
+            </div>
+            <div class="actions">
+              <a class="btn box-refresh" href="#">
+                <i class="icon-refresh"></i>
+              </a>
+              <a class="btn box-remove" href="#">
+                <i class="icon-remove"></i>
+              </a>
+            </div>
+          </div>
+          <div class="row-fluid">
+            <div class="span6">
+              <div class="statistic-box thumbnail">
+                <h3 class="title text-error">191</h3>
+                <small>New</small>
+                <div class="text-error icon-inbox align-right"></div>
+              </div>
+              <div class="statistic-box thumbnail">
+                <h3 class="title text-warning">311</h3>
+                <small>In process</small>
+                <div class="text-warning icon-check align-right"></div>
+              </div>
+              <div class="statistic-box thumbnail">
+                <h3 class="title text-info">3</h3>
+                <small>Pending</small>
+                <div class="text-info icon-time align-right"></div>
+              </div>
+            </div>
+            <div class="span6">
+              <div class="statistic-box thumbnail">
+                <h3 class="title text-primary">3</h3>
+                <small>Shipped</small>
+                <div class="text-primary icon-truck align-right"></div>
+              </div>
+              <div class="statistic-box thumbnail">
+                <h3 class="title text-success">981</h3>
+                <small>Completed</small>
+                <div class="text-success icon-flag align-right"></div>
+              </div>
+              <div class="statistic-box thumbnail muted">
+                <h3 class="title muted">0</h3>
+                <small>Canceled</small>
+                <div class="muted icon-remove align-right"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="span3 box">
+          <div class="box-header">
+            <div class="lead">
+              <i class="icon-group"></i>
+              Visitors
+            </div>
+            <div class="actions">
+              <a class="btn box-refresh" href="#">
+                <i class="icon-refresh"></i>
+              </a>
+              <a class="btn box-remove" href="#">
+                <i class="icon-remove"></i>
+              </a>
+            </div>
+          </div>
+          <div class="row-fluid">
+            <div class="span12">
+              <div class="statistic-box thumbnail">
+                <h3 class="title text-error">9100</h3>
+                <small>Unique</small>
+                <div class="text-error icon-user align-right"></div>
+              </div>
+              <div class="statistic-box thumbnail">
+                <h3 class="title text-warning">41 000</h3>
+                <small>Pageviews</small>
+                <div class="text-warning icon-book align-right"></div>
+              </div>
+              <div class="statistic-box thumbnail">
+                <h3 class="title text-primary">12:21</h3>
+                <small>Average time</small>
+                <div class="text-primary icon-time align-right"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="span3 box">
+          <div class="box-header">
+            <div class="lead">
+              <i class="icon-comments"></i>
+              Comments
+            </div>
+            <div class="actions">
+              <a class="btn box-refresh" href="#">
+                <i class="icon-refresh"></i>
+              </a>
+              <a class="btn box-remove" href="#">
+                <i class="icon-remove"></i>
+              </a>
+            </div>
+          </div>
+          <div class="row-fluid">
+            <div class="span12">
+              <div class="statistic-box thumbnail">
+                <h3 class="title text-error">91</h3>
+                <small>New</small>
+                <div class="text-error icon-plus align-right"></div>
+              </div>
+              <div class="statistic-box thumbnail">
+                <h3 class="title text-success">1</h3>
+                <small>Approved</small>
+                <div class="text-success icon-ok align-right"></div>
+              </div>
+              <div class="statistic-box thumbnail">
+                <h3 class="title text-info">123</h3>
+                <small>Pending</small>
+                <div class="text-info icon-time align-right"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row-fluid">
+        <div class="span12 box">
+          <div class="box-header">
+            <div class="lead">
+              <div class="icon-link"></div>
+              Quick navigation
+            </div>
+            <div class="actions">
+              <a class="btn box-refresh" href="#">
+                <i class="icon-refresh"></i>
+              </a>
+              <a class="btn box-remove" href="#">
+                <i class="icon-remove"></i>
+              </a>
+            </div>
+          </div>
+          <div class="row-fluid">
+            <div class="span2 box">
+              <a href="#">
+                <div class="quick-link-box red-background">
+                  <div class="icon-inbox"></div>
+                  <h4 class="title">Orders</h4>
+                </div>
+              </a>
+            </div>
+            <div class="span2 box">
+              <a href="#">
+                <div class="quick-link-box blue-background">
+                  <div class="icon-comments"></div>
+                  <h4 class="title">Comments</h4>
+                </div>
+              </a>
+            </div>
+            <div class="span2 box">
+              <a href="#">
+                <div class="quick-link-box green-background">
+                  <div class="icon-star"></div>
+                  <h4 class="title">Stars</h4>
+                </div>
+              </a>
+            </div>
+            <div class="span2 box">
+              <a href="#">
+                <div class="quick-link-box orange-background">
+                  <div class="icon-magic"></div>
+                  <h4 class="title">Magic</h4>
+                </div>
+              </a>
+            </div>
+            <div class="span2 box">
+              <a href="#">
+                <div class="quick-link-box purple-background">
+                  <div class="icon-eye-open"></div>
+                  <h4 class="title">Show</h4>
+                </div>
+              </a>
+            </div>
+            <div class="span2 box">
+              <a href="#">
+                <div class="quick-link-box muted-background">
+                  <div class="icon-globe"></div>
+                  <h4 class="title">Earth</h4>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {% comment %}
+      <div class="row-fluid">
+        <div class="span6 box">
+          <div class="box-header">
+            <div class="lead">
+              <div class="icon-envelope-alt"></div>
+              Message
+            </div>
+            <div class="actions">
+              <a class="btn box-refresh" href="#">
+                <i class="icon-refresh"></i>
+              </a>
+              <a class="btn box-remove" href="#">
+                <i class="icon-remove"></i>
+              </a>
+            </div>
+          </div>
+          <div class="thumbnail">
+            <div class="inner-spacer">
+              <input class="span12" id="email" name="email" placeholder="E-mail" type="text" value=""/>
+              <textarea class="span12 wysihtml5" cols="40" id="body_" name="body[]" placeholder="Your message..."
+                        rows="5">
+              </textarea>
+
+              <div class="text-right">
+                <a href="#" class="btn btn-primary">Send</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="span6 box tasks">
+          <div class="box-header">
+            <div class="lead">
+              <div class="icon-tasks"></div>
+              Tasks
+            </div>
+            <div class="actions">
+              <a class="btn box-refresh" href="#">
+                <i class="icon-refresh"></i>
+              </a>
+              <a class="btn box-remove" href="#">
+                <i class="icon-remove"></i>
+              </a>
+            </div>
+          </div>
+          <div class="thumbnail">
+            <div class="inner-spacer">
+              <span class="pull-left">
+                <a href="#">Cras sed tellus velit</a>
+              </span>
+              <small class="pull-right">40%</small>
+              <div class="clearfix"></div>
+              <div class="progress progress-small">
+                <div class="bar" style="width: 40%"></div>
+              </div>
+              <span class="pull-left">
+                <a href="#">Quis posuere tortor - maecenas in risus</a>
+              </span>
+              <small class="pull-right">80%</small>
+              <div class="clearfix"></div>
+              <div class="progress progress-danger progress-small">
+                <div class="bar" style="width: 80%"></div>
+              </div>
+              <span class="pull-left">
+                <a href="#">Donec sodales justo in lacus sagittis</a>
+              </span>
+              <small class="pull-right">58%</small>
+              <div class="clearfix"></div>
+              <div class="progress progress-success progress-small">
+                <div class="bar" style="width: 68%"></div>
+              </div>
+              <span class="pull-left">
+                <a href="#">Etiam condimentum sem nec</a>
+              </span>
+              <small class="pull-right">100%</small>
+              <div class="clearfix"></div>
+              <div class="progress progress-warning progress-small">
+                <div class="bar" style="width: 100%"></div>
+              </div>
+              <span class="pull-left">
+                <a href="#">Etiam condimentum sem nec</a>
+              </span>
+              <small class="pull-right">24%</small>
+              <div class="clearfix"></div>
+              <div class="progress progress-info progress-small">
+                <div class="bar" style="width: 24%"></div>
+              </div>
+              <span class="pull-left">
+                <a href="#">Id mi placerat</a>
+              </span>
+              <small class="pull-right">10%</small>
+              <div class="clearfix"></div>
+              <div class="progress progress-success progress-small">
+                <div class="bar" style="width: 10%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endcomment %}
+    </div>
   </div>
 </div>
-
-<hr/>
 {% endblock content %}

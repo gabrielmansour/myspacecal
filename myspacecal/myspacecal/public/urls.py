@@ -9,4 +9,7 @@ urlpatterns = patterns(
     url(r'^$', 'home', name='home'),
     url(r'^about/$', 'about', name='about'),
     url(r'^contact/$', 'contact', name='contact'),
+
+    url(r'^agency/(?P<slug>.+)$', 'agency', name='agency-detail'),
+    url(r'^satellite/(?P<slug>.+)$', 'satellite', name='satellite-detail'),
 )
