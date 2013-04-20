@@ -1,0 +1,10 @@
+@charset "UTF-8";
+
+/* myspacecal.css */
+
+.external-link {
+    font-size: 0.5em;
+}
+.external-link a {
+    text-decoration: none;
+}
