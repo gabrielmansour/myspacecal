@@ -2,6 +2,7 @@
 # encoding=utf-8
 
 from django.http import HttpResponse
+from django.shortcuts import get_object_or_404
 from django.template.response import TemplateResponse
 from django.utils.timezone import utc
 from myspacecal.data.models import Agency
@@ -24,14 +25,14 @@ def contact (request):
     return TemplateResponse(request, 'public/base_contact.html', ctx)
 
 def agency(request, slug):
-    agency = Agency.objects.get_object_or_404(slug=slug)
+    agency = get_object_or_404(Agency, slug=slug)
     ctx = {
         'agency': agency,
     }
     return TemplateResponse(request, 'public/base_agency.html', ctx)
 
 def satellite(request, slug):
-    satellite = Satellite.objects.get_object_or_404(slug=slug)
+    satellite = get_object_or_404(Satellite, slug=slug)
     ctx = {
         'satellite': satellite,
     }
