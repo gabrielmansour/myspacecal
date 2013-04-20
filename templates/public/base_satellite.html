@@ -1,5 +1,39 @@
 {% extends "public/base.html" %}
 
 {% block content %}
-Satellite - FIXME
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span12">
+      <div class="row-fluid">
+        <div class="span12">
+          <div class="page-header">
+            <h1>
+              <i class="icon-calendar"></i>
+              <span>{{ satellite.name }}</span>
+            </h1>
+          </div>
+        </div>
+      </div>
+      <div class="row-fluid">
+        <div class="span3 box" id="events">
+          <div class="thumbnail">
+            <div class="inner-spacer">
+              <div class="lead">Draggable events</div>
+              <div class="label label-important external-event">Jane meetup</div>
+              <div class="label label-warning external-event">Shopping</div>
+              <div class="label label-success external-event">Dentist</div>
+            </div>
+          </div>
+        </div>
+        <div class="span9 box">
+          <div class="thumbnail">
+            <div class="inner-spacer">
+              <div id="calendar"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 {% endblock content %}
