@@ -1,6 +1,7 @@
 fabric
 docutils
 django
+django-markdown-deux
 django-piston
 lxml
 pillow
